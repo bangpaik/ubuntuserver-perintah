@@ -9,7 +9,7 @@ echo "-------------------------------------------------------------------";
 echo " Script untuk mendukung otomatisasi apache server di Ubuntu Server ";
 echo "-------------------------------------------------------------------";
 echo " Instalasi                                                         ";
-echo " [1] Install PHP 7.4, dan menyalin phpinfo.php ke /var/www/html dan      ";
+echo " [1] Install Apache2 , PHP 7.4, dan menyalin phpinfo.php ke /var/www/html dan      ";
 echo "      install MySQL Server                                         ";
 echo " [2] Install phpmyadmin 5.0.4 (Kompatible dengan PHP 7.4)         ";
 echo " [3] Amankan dari PHP Shell(/etc/apache2/php7.4/apache/php.ini)    ";
@@ -20,6 +20,7 @@ echo "";
 case $choice in
 
 1)  sudo apt-get update
+    sudo apt -y install apache2
     sudo apt -y install software-properties-common
     sudo add-apt-repository ppa:ondrej/php 
     sudo apt-get update
