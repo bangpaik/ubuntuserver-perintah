@@ -23,8 +23,9 @@ case $choice in
     sudo apt -y install software-properties-common
     sudo add-apt-repository ppa:ondrej/php 
     sudo apt-get update
-    sudo apt -y install php7.4
-    sudo cp support/phpinfo.php /var/www/html
+    apt install php libapache2-mod-php php-mysql
+    sudo cp phpinfo.php /var/www/html
+    service apache2 restart
     sudo apt install mysql-server
     echo -n "Masukkan password root yang akan dibuat : "
     read passmysql
