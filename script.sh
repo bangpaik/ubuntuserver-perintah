@@ -12,8 +12,7 @@ echo " Instalasi                                                         ";
 echo " [1] Install Apache2 , PHP 7.4, dan menyalin phpinfo.php ke /var/www/html dan      ";
 echo "      install MySQL Server                                         ";
 echo " [2] Install phpmyadmin 5.0.4 (Kompatible dengan PHP 7.4)         ";
-echo " [3] Amankan dari PHP Shell(/etc/apache2/php7.4/apache/php.ini)    ";
-echo " [4] Exit                                                          ";
+echo " [3] Exit                                                          ";
 echo "-------------------------------------------------------------------";
 read -p " Masukkan Nomor Pilihan Anda antara [1 s.d 4] : " choice;
 echo "";
@@ -46,21 +45,7 @@ case $choice in
 
 
 
-3) read -p "Apakah anda yakin menggunakan apache server dengan PHP 7.4? y/n :" -n 1 -r
-    echo  ""
-    if [[ ! $REPLY =~ ^[Nn]$ ]]
-    then
-    if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
-    echo "File php.ini tidak ada di /etc/php/7.4/apache2/php.ini"
-    else
-    sudo cp /etc/php/7.4/apache2/php.ini /etc/php/7.4/apache2/phpini.backup
-    sudo cp support/php.ini /etc/php/7.4/apache2
-    sudo service apache2 restart
-    fi
-    fi
-    ;;
-
-4) exit
+3) exit
     ;;
 *)    echo "Menu tidak ditemukan"
 esac
