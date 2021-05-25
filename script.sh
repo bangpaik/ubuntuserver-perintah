@@ -9,12 +9,11 @@ echo "-------------------------------------------------------------------";
 echo " Script untuk mendukung otomatisasi apache server di Ubuntu Server ";
 echo "-------------------------------------------------------------------";
 echo " Instalasi                                                         ";
-echo " [1] Install Apache2 , PHP 7.4, dan menyalin phpinfo.php ke /var/www/html dan      ";
-echo "      install MySQL Server                                         ";
-echo " [2] Install phpmyadmin 5.0.4 (Kompatible dengan PHP 7.4)         ";
+echo " [1] Install Apache2 , MySQL dan menyalin phpinfo.php ke /var/www/html dan      ";
+echo " [2] Install phpmyadmin 5.0.4                                      ";
 echo " [3] Exit                                                          ";
 echo "-------------------------------------------------------------------";
-read -p " Masukkan Nomor Pilihan Anda antara [1 s.d 4] : " choice;
+read -p " Masukkan Nomor Pilihan Anda antara [1 s.d 3] : " choice;
 echo "";
 case $choice in
 
