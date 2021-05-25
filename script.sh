@@ -22,7 +22,9 @@ case $choice in
     sudo apt -y install software-properties-common
     sudo add-apt-repository ppa:ondrej/php 
     sudo apt-get update
-    apt install php libapache2-mod-php php-mysql
+    deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main
+    deb-src http://ppa.launchpad.net/ondrej/php/ubuntu bionic main
+    sudo apt-get install php7.3
     sudo cp phpinfo.php /var/www/html
     service apache2 restart
     sudo apt install mysql-server
