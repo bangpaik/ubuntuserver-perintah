@@ -24,7 +24,7 @@ case $choice in
     sudo apt-get update
     deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main
     deb-src http://ppa.launchpad.net/ondrej/php/ubuntu bionic main
-    sudo apt-get install php7.3
+    sudo apt-get install php7.4
     sudo cp phpinfo.php /var/www/html
     service apache2 restart
     sudo apt install mysql-server
