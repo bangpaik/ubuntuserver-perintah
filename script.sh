@@ -33,7 +33,7 @@ case $choice in
     sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$passmysql';" 
     sudo clear
     service apache2 restart
-    read -p "Tekan enter untuk restart, setelah restart cek phpinfo.php di browser, bisa dipanggil lewat ip address/phpinfo.php"
+    read -p "Instalasi Sukses, Silahkan cek browser dengan memasukkan IP server"
     ;;
 
 2) sudo apt install phpmyadmin
@@ -52,13 +52,13 @@ case $choice in
 *)    echo "Menu tidak ditemukan"
 esac
 echo ""
-echo "Script untuk mendukung otomatisasi apache server di Ubuntu Server"
+echo "Script mudah instalasi LAMP di Ubuntu Server"
 echo ""
 echo -n "Kembali ke menu? [y/n]: ";
 read again;
 while [[ $again != 'Y' ]] && [[ $again != 'y' ]] && [[ $again != 'N' ]] && [[ $again != 'n' ]];
 do
-echo "Inputan yang anda pilih tidak ada di menu";
+echo "Data tidak ditemukan";
 echo -n "Kembali ke menu? [y/n]: ";
 read again;
 done
