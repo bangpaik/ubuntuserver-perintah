@@ -9,7 +9,7 @@ echo "-------------------------------------------------------------------";
 echo " Script untuk mendukung otomatisasi apache server di Ubuntu Server ";
 echo "-------------------------------------------------------------------";
 echo " Instalasi                                                         ";
-echo " [1] Install Apache2 , MySQL, php7.3 dan menyalin phpinfo.php ke /var/www/html dan      ";
+echo " [1] Install Apache2 , MySQL, php7.4 dan menyalin phpinfo.php ke /var/www/html dan      ";
 echo " [2] Install phpmyadmin 5.0.4                                      ";
 echo " [3] Exit                                                          ";
 echo "-------------------------------------------------------------------";
