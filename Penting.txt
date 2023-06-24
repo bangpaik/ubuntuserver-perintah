@@ -1,3 +1,8 @@
+SOLUSI login without a password is forbidden by configuration (see allownopassword)
+sudo nano /etc/phpmyadmin/config.inc.php
+aktifkan
+$cfg['Servers'][$i]['AllowNoPassword'] = TRUE;
+
 "Access denied for user 'root'@'localhost' (mysqli_real_connect(): (HY000/1698))" di Ubuntu
 -sudo -u root mysql
 -UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE user = 'root';
