@@ -32,3 +32,7 @@ $cfg['Servers'][$i]['AllowNoPassword'] = TRUE;
     AllowOverride All
 -sudo a2enmod rewrite
 -sudo service apache2 restart
+
+
+Certbot tidak bisa diinstall
+sudo sed -i -e 's/mirrors.idcloudhost.com/id.archive.ubuntu.com/g' /etc/apt/sources.list
