@@ -36,3 +36,20 @@ $cfg['Servers'][$i]['AllowNoPassword'] = TRUE;
 
 Certbot tidak bisa diinstall
 sudo sed -i -e 's/mirrors.idcloudhost.com/id.archive.ubuntu.com/g' /etc/apt/sources.list
+
+Suduik
+- sudo mv /var/www/html/phpmyadmin /opt/
+- sudo nano /etc/apache2/sites-available/000-default.conf
+
+Di dalam tag <VirtualHost *:80>, tambahkan baris Alias berikut: dan simpan
+
+Alias /suduik "/opt/phpmyadmin"
+
+<Directory "/opt/phpmyadmin">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
+
+- sudo a2enmod alias
+- sudo systemctl restart apache2
